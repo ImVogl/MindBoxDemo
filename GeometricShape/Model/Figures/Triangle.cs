@@ -28,6 +28,10 @@ internal class Triangle : ITriangle
     /// <param name="edgeC">Длина третьего ребра треугольника.</param>
     public Triangle(double edgeA, double edgeB, double edgeC)
     {
+        if (edgeA <= 0) throw new ArgumentOutOfRangeException(nameof(edgeA));
+        if (edgeB <= 0) throw new ArgumentOutOfRangeException(nameof(edgeB));
+        if (edgeC <= 0) throw new ArgumentOutOfRangeException(nameof(edgeC));
+
         _edgeA = edgeA;
         _edgeB = edgeB;
         _edgeC = edgeC;
