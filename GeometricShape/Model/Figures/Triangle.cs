@@ -43,8 +43,8 @@ internal class Triangle : ITriangle
     /// <inheritdoc />
     public double GetArea()
     {
-        var halfPerimeter = _edgeA + _edgeB + _edgeC;
-        return Math.Sqrt(halfPerimeter * (halfPerimeter - _edgeA) * (halfPerimeter - _edgeB) * (halfPerimeter - _edgeB));   // Формула Герона
+        var halfPerimeter = 0.5 * (_edgeA + _edgeB + _edgeC);
+        return Math.Sqrt(halfPerimeter * (halfPerimeter - _edgeA) * (halfPerimeter - _edgeB) * (halfPerimeter - _edgeC));   // Формула Герона
     }
 
     /// <summary>
@@ -54,7 +54,7 @@ internal class Triangle : ITriangle
     private bool CheckIsRight()
     {
         // Точность. При значениях меньше данной величины, считаем, что величина равна нулю.
-        const double precision = 1E-300;
+        const double precision = 2 * double.Epsilon;
 
         // Сторона A является гипотенузой.
         if (_edgeA > _edgeB && _edgeA > _edgeC)

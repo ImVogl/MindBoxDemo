@@ -26,7 +26,7 @@ public class ShapeFactory: IShapeFactory
             if (initTriangle.EdgeB <= 0) throw new ArgumentOutOfRangeException(nameof(initTriangle.EdgeB));
             if (initTriangle.EdgeC <= 0) throw new ArgumentOutOfRangeException(nameof(initTriangle.EdgeC));
 
-            return new Triangle(initTriangle.EdgeA, initTriangle.EdgeB, initTriangle.EdgeA);
+            return new Triangle(initTriangle.EdgeA, initTriangle.EdgeB, initTriangle.EdgeC);
         }
 
         throw new ArgumentOutOfRangeException(nameof(shapeInit));
