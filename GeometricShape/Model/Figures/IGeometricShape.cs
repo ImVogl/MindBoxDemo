@@ -1,4 +1,4 @@
-﻿namespace GeometricShape
+﻿namespace GeometricShape.Model.Figures
 {
     /// <summary>
     /// Интерфейс геометрической фигуры.

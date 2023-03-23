@@ -1,9 +1,9 @@
-﻿namespace GeometricShape;
+﻿namespace GeometricShape.Model.Figures;
 
 /// <summary>
 /// Класс, содержащий сведения окружности.
 /// </summary>
-public class Circle : IGeometricShape
+internal class Circle : IGeometricShape
 {
     /// <summary>
     /// Радиус окружности.
